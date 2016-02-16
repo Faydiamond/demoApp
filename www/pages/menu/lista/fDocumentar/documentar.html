@@ -1,0 +1,20 @@
+<ion-view view-title="Documentar ticket N {{}}">
+  <ion-content class="padding">
+    <div class="list list-inset">
+      <span>Documentar...</span>
+      <label class="item item-input">
+        <textarea  rows="7" ></textarea>
+      </label>
+    </div>
+<ion-radio ng-model="tipoDoc" ng-value="'O'">Observaciones</ion-radio>
+<ion-radio ng-model="tipoDoc" ng-value="'R'">Solución  remota</ion-radio>
+<ion-radio ng-model="tipoDoc" ng-value="'S'">Solución en sitio</ion-radio>
+
+<br>
+<br>
+<button class ="button button-full button-dark">
+Enviar
+</button>
+
+  </ion-content>
+</ion-view>

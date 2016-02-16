@@ -1,0 +1,11 @@
+<ion-view view-title="Lista de tickets">
+  <ion-content class="padding">
+    <div class="list">
+      <a class="item item-avatar {{item.estado}}"  ng-repeat='item in db' ng-href="#/menu/lista/{{item.url}}">
+        <h2>Número del  ticket es {{item.id_ticket}} </h2>
+        <p>Cliente : {{item.cliente}}</p>
+      </a>
+
+
+  </ion-content>
+</ion-view>
