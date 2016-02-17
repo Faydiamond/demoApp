@@ -3,9 +3,9 @@ angular.module('starter')
 
     $stateProvider
       .state('m.cierreticket',{
-        url : '/cierreticket',
+        url : '/lista/cierreticket',
         views : {
-          'cierreticket' : {
+          'lista' : {
             templateUrl : 'pages/menu/lista/fCierre/cierreticket.html',
             controller : 'cierreticketCtrl'
           }

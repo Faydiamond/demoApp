@@ -1,6 +1,30 @@
 <ion-view view-title="Cierre de ticket">
-  <ion-content class="padding">
-    basurasss
+  <ion-content class="padding" scroll='false'>
+    <!-- PASO 1 ::: FIXME-->
+    <section ng-show='paso === 1'>
+      <label class="item item-input">
+        <textarea placeholder="Comments" ng-model="ct.TxtArea"></textarea>
+      </label>
+      <button class="button button-clear button-positive" ng-click='siguientePaso()'>
+        Siguiente >
+      </button>
+    </section>
+    <!-- Paso 2 ::: FIXME -->
+    <section>
+      <section ng-show='paso === 2'>
+      <h2>Encuesta</h2>
+    
+
+    </section>
+    <!-- Paso 3 ::: FIXME-->
+    <section ng-show='paso === 3'>
+      <canvas id="signatureCanvas" width="300" height="180 " style="border: 1px solid black;"></canvas>
+      <div class="button-bar">
+        <a class='button button-energized'  ng-click="clearCanvas()">Clear canvas</a>
+        <a class="button button-balances" ng-click="saveCanvas()">Cerrar servicio</a>
+      </div>
+    </section>
+
 
 
   </ion-content>
