@@ -3,29 +3,45 @@
     <!-- PASO 1 ::: FIXME-->
     <section ng-show='paso === 1'>
       <label class="item item-input">
-        <textarea placeholder="Comments" ng-model="ct.TxtArea"></textarea>
+        <textarea placeholder="Observaciones" ng-model="ct.TxtArea"></textarea>
       </label>
-      <button class="button button-clear button-positive" ng-click='siguientePaso()'>
-        Siguiente >
-      </button>
     </section>
     <!-- Paso 2 ::: FIXME -->
-    <section>
-      <section ng-show='paso === 2'>
-      <h2>Encuesta</h2>
-    
-
+    <section ng-show='paso === 2'>
+      <h3>Pregunta 1</h3>
+      <ion-list>
+        <ion-radio ng-model="ct.p" ng-value="'S'" name='ctp'>Si</ion-radio>
+        <ion-radio ng-model="ct.p" ng-value="'N'" name='ctp'>No</ion-radio>
+      </ion-list>
+    </section>
+    <!-- Paso 3 ::: FIXME -->
+    <section ng-show='paso === 3'>
+      <h3>Pregunta 2</h3>
+      <ion-list>
+        <ion-radio ng-model="ct.pp" ng-value="'S'" name='ctpp'>Si</ion-radio>
+        <ion-radio ng-model="ct.pp" ng-value="'N'" name='ctpp'>No</ion-radio>
+      </ion-list>
+    </section>
+    <!-- Paso 4 ::: FIXME -->
+    <section ng-show='paso === 4'>
+      <h3>Pregunta 3</h3>
+      <ion-list>
+        <ion-radio ng-model="ct.ppp" ng-value="'M'" name='ctppp'>Malo</ion-radio>
+        <ion-radio ng-model="ct.ppp" ng-value="'B'" name='ctppp'>Bueno</ion-radio>
+        <ion-radio ng-model="ct.ppp" ng-value="'M2'" name='ctppp'>Muy bueno</ion-radio>
+      </ion-list>
     </section>
     <!-- Paso 3 ::: FIXME-->
-    <section ng-show='paso === 3'>
+    <section ng-show='paso === 5'>
       <canvas id="signatureCanvas" width="300" height="180 " style="border: 1px solid black;"></canvas>
       <div class="button-bar">
-        <a class='button button-energized'  ng-click="clearCanvas()">Clear canvas</a>
+        <a class='button button-energized' ng-click="clearCanvas()">Clear canvas</a>
         <a class="button button-balances" ng-click="saveCanvas()">Cerrar servicio</a>
       </div>
     </section>
-
-
-
+    <div class="button-bar">
+      <a class='button button-clear button-positive' ng-click="atras()" ng-disabled='paso === 1'> < Atrás</a>
+      <a class="button button-clear button-positive" ng-click='siguientePaso()' ng-disabled='paso === 5'>Siguiente ></a>
+    </div>
   </ion-content>
 </ion-view>
